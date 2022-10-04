@@ -1,106 +1,89 @@
-body {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  margin: 0;
+:root {
+	font-size: 16px;
+	font-family:  'Open Sans';
 }
 
-main {
-  display: grid;
-  place-items: center;
+
+body {
+	margin:  0;
+	padding:  0;
 }
 
 h1 {
-  margin: 10px;
-}
-
-.pause {
-  margin-bottom: 10px;
-  width: 200px;
-  border: 2px solid red;
-  align-items: flex-start;
-}
-
-h2 {
-  margin: 10px 0 0;
-}
-
-span {
-  margin: 0 0 20px;
+	font-size:  5rem;
+	padding:  0 10px;
+	margin: 0 10px 0 0;
 }
 
 .container {
-  border: 2px solid red;
-  width: 325px;
-  height: 325px;
-  padding: 0;
-  margin: 0;
-  display: none;
-  /* display: inline; */
+	margin-left:  5rem;
+	text-align: center;
+	overflow-x: hidden;
 }
 
-.scoresheet {
-  width: 250px;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
+img {
+	width:  500px;
+	height:  500px;
 }
 
-.ball {
-  width: 1rem;
-  height: 1rem;
-  /* border: 2px solid red; */
-  border-radius: 50%;
-  background: orange;
-  margin: 0;
-  animation: color-rotate 3s infinite;
+
+.nav {
+	width:  5rem;
+	height:  100vh;
+	position:  fixed;
+	background-color: black;
+	opacity: 0.9;
+	transition: 200ms ease;
 }
 
-.bat {
-  margin: 0;
-  width: 30px;
-  height: 5px;
-  background: blue;
-  left: 140px;
+
+.navbar-nav {
+	list-style: none;
+	margin:  0;
+	padding:  0;
+	list-style: none;
+	display:  flex;	
+	flex-direction: column;
+	align-items:  center;
+	height:  100%;
+
+
 }
 
-@keyframes color-rotate {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
+.nav-item {
+	width:  100%;
+	margin:  2rem;
 }
 
-/* .right_btn {
-  background: red;
-} */
-
-.modal-container {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.6);
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-items: center;
+.nav-item:last-child {
+	margin-top:  auto;
 }
 
-.modal {
-  min-width: 200px;
-  width: 35%;
-  height: 50%;
-  background: rgb(104, 63, 199);
-  display: grid;
-  place-items: center;
-  color: orange;
-  /* width: 50%; */
+.nav-link {
+	display: flex;
+	align-items: center;
+	height:  5rem;
+	color:  white;
+	text-decoration: none;
 }
 
-.start {
-  padding: 10px 20px;
-  background: aqua;
-  border: none;
-  border-radius: 2px;
-  color: rgb(51, 6, 124);
-  font-weight: bold;
+.link-text {
+	display: none;
+	margin-left:  1rem;
+	font-size: 1.5rem;
+}
+
+
+i {
+	min-width:  2rem;
+	margin:  0 1.5rem;
+	font-size:  30px;
+}
+
+.nav:hover {
+	width:  16rem;
+}
+
+.nav:hover .link-text {
+	display: block;
 }
